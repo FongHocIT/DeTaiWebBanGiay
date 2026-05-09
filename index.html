@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FongSport - Cửa hàng giày dép chính hãng</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href ="index.html"><img src="images/main-logo.png" alt="FongSport Logo" class="logo-img"></a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                
+                <ul id="suggestionBox" class="suggestion-box hide"></ul>
+            </div>
+            <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">2</span>
+            </a>
+        </div>
+    </header>
+
+    <section class="hero-banner">
+        <div class="hero-content">
+            <h1>Dẫn đầu xu hướng</h1>
+            <h2>trong từng bước chân.</h2>
+            <button class="btn-shop-now">Mua ngay</button>
+        </div>
+    </section>
+    <section class="features-section container">
+        <div class="feature-box">
+            <i class="fa-solid fa-truck-fast"></i>
+            <div class="feature-text">
+                <h4>Giao hàng hỏa tốc</h4>
+                <p>Nhận hàng trong 24h</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <i class="fa-solid fa-shield-halved"></i>
+            <div class="feature-text">
+                <h4>Chính hãng 100%</h4>
+                <p>Hoàn tiền gấp đôi nếu giả</p>
+            </div>
+        </div>
+        <div class="feature-box">
+            <i class="fa-solid fa-rotate-left"></i>
+            <div class="feature-text">
+                <h4>Đổi trả miễn phí</h4>
+                <p>Trong vòng 30 ngày</p>
+            </div>
+        </div>
+    </section>
+    <section class="products-section">
+        <h2 class="section-title">DANH MỤC SẢN PHẨM</h2>
+        
+        <div class="filter-menu">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="men">Giày Nam</button>
+            <button class="filter-btn" data-filter="women">Giày Nữ</button>
+            <button class="filter-btn" data-filter="kids">Trẻ em</button>
+        </div>
+    
+        <div class="product-grid">
+            
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=adidas-eq21">
+                        <img src="images/adidas-aq-21.img" alt="Giày Thể Thao Adidas EQ 21">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=adidas-eq21" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Thể Thao Adidas EQ 21 Run Shoes Màu Trắng</h3>
+                    <p class="price">1.550.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Thể Thao Adidas EQ 21', 1550000, 'images/adidas-aq-21.img')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=adidas-grand-court">
+                        <img src="images/adidas-grand-court.img" alt="Giày thể thao nam - Adidas Grand Court">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=adidas-grand-court" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày thể thao nam - Adidas Grand Court trắng</h3>
+                    <p class="price">1.499.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày thể thao nam - Adidas Grand Court', 1499000, 'images/adidas-grand-court.img')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=adidas-pureboost">
+                        <img src="images/adidas.img" alt="Giày Adidas Nam Nữ Chính Hãng - Pureboost Light Shoes">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=adidas-pureboost" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Adidas Nam Nữ Chính Hãng - Pureboost Light Shoes - Màu Đen | JapanSport </h3>
+                    <p class="price">1.580.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Adidas Nam Nữ Chính Hãng - Pureboost Light Shoes', 1580000, 'images/adidas.img')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-hunter-x">
+                        <img src="images/btis-den-nam.img" alt="Giày Thể Thao Nam Bitis Hunter X">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-hunter-x" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Thể Thao Nam Biti's Hunter X 2k20 </h3>
+                    <p class="price">949.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Thể Thao Nam Bitis Hunter X', 949000, 'images/btis-den-nam.img')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-hunter-core">
+                        <img src="images/btis-nam.png" alt="Giày Thể Thao Nam Bitis Hunter Core">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-hunter-core" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Thể Thao Nam Biti's Hunter Core 2023 ( Xám )</h3>
+                    <p class="price">780.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Thể Thao Nam Bitis Hunter Core', 780000, 'images/btis-nam.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-running">
+                        <img src="images/btis-xam-nam.png" alt="Giày Chạy Bộ Nam Bitis Hunter Running">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-running" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Chạy Bộ Nam Biti's Hunter Running</h3>
+                    <p class="price">1.069.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Chạy Bộ Nam Bitis Hunter Running', 1069000, 'images/btis-xam-nam.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=crocs-cool">
+                        <img src="images/crocs-den.png" alt="Giày Crocs cực Cool Đen">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=crocs-cool" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Crocs cực Cool Đen </h3>
+                    <p class="price">400.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Crocs cực Cool Đen', 400000, 'images/crocs-den.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=nike-af1">
+                        <img src="images/nike-air-force.png" alt="Giày Nike Air Force 1 Low College Pack Midnight Navy">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=nike-af1" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Nike Air Force 1 Low College Pack Midnight Navy</h3>
+                    <p class="price">3.621.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Nike Air Force 1 Low College Pack Midnight Navy', 3621000, 'images/nike-air-force.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=nike-jordan1">
+                        <img src="images/nike-air-jordan.png" alt="Giày Thể Thao Nike Air Jordan 1 Low Dune">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=nike-jordan1" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Thể Thao Nike Air Jordan 1 Low Dune Red</h3>
+                    <p class="price">2.990.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Thể Thao Nike Air Jordan 1 Low Dune', 2990000, 'images/nike-air-jordan.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=nike-court">
+                        <img src="images/nike-court-vision.png" alt="Giày Nike Court Vision Mid Smoke">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=nike-court" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Nike Court Vision Mid Smoke Grey</h3>
+                    <p class="price">1.490.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Nike Court Vision Mid Smoke', 1490000, 'images/nike-court-vision.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="men">
+                <div class="product-img">
+                    <a href="products-detail.html?id=thuong-dinh-den">
+                        <img src="images/thuong-dinh-den.png" alt="Giày Thượng Đình đế đinh">
+                    </a>
+                </div>
+                <a href="products-detail.html?id=thuong-dinh-den" style="text-decoration: none; color: inherit;"></a>
+                <div class="product-info">
+                    <h3>Giày Thượng Đình đế đinh</h3>
+                    <p class="price">90.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Thượng Đình đế đinh', 90000, 'images/thuong-dinh-den.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="women">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-hunter-nu">
+                        <img src="images/btis-hong-nu.img" alt="Giày Bitis Hunter Nữ Màu Hồng">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-hunter-nu" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Biti's Hunter Nữ Màu Hồng</h3>
+                    <p class="price">980.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Bitis Hunter Nữ Màu Hồng', 980000, 'images/btis-hong-nu.img')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="women">
+                <div class="product-img">
+                    <a href="products-detail.html?id=adidas-nu">
+                        <img src="images/adidas-nu.img" alt="Giày Đế Mềm Nữ Adidas">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=adidas-nu" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Đế Mềm Nữ Adidas</h3>
+                    <p class="price">3.400.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Đế Mềm Nữ Adidas', 3400000, 'images/adidas-nu.img')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="women">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-embrace">
+                        <img src="images/btis-nu.png" alt="Giày Thể Thao Nữ Bitis Êmbrace">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-embrace" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày Thể Thao Nữ Biti's Êmbrace</h3>
+                    <p class="price">620.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày Thể Thao Nữ Bitis Êmbrace', 620000, 'images/btis-nu.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="women">
+                <div class="product-img">
+                    <a href="products-detail.html?id=crocs-platform">
+                        <img src="images/crocs-trang.png" alt="Giày CLOG Nữ Crocs Platform Classic">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=crocs-platform" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày CLOG Nữ Crocs Platform Classic</h3>
+                    <p class="price">980.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày CLOG Nữ Crocs Platform Classic', 980000, 'images/crocs-trang.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="women">
+                <div class="product-img">
+                    <a href="products-detail.html?id=crocs-literite">
+                        <img src="images/crocs-xanh.png" alt="Giày CLOG Nữ Crocs Literite">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=crocs-literite" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày CLOG Nữ Crocs Literite</h3>
+                    <p class="price">475.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày CLOG Nữ Crocs Literite', 475000, 'images/crocs-xanh.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kids">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-eva-kid">
+                        <img src="images/crocs-nu-kid.png" alt="Dép Eva Bitis Bé Gái Màu Xanh Dương">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-eva-kid" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Dép Eva Biti's Bé Gái Màu Xanh Dương</h3>
+                    <p class="price">270.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Dép Eva Bitis Bé Gái Màu Xanh Dương', 270000, 'images/crocs-nu-kid.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kids">
+                <div class="product-img">
+                    <a href="products-detail.html?id=btis-disney-kid">
+                        <img src="images/btis-nu-kid.png" alt="Sandal Bitis Disney Cherry Blossom">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=btis-disney-kid" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Sandal Biti's Disney Cherry Blossom Bé Gái Màu Kem</h3>
+                    <p class="price">475.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Sandal Bitis Disney Cherry Blossom', 475000, 'images/btis-nu-kid.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kids">
+                <div class="product-img">
+                    <a href="products-detail.html?id=dep-adidas-kid">
+                        <img src="images/dep-adidas-kids.png" alt="Dép ADILETTE ESTRAP trẻ em">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=dep-adidas-kid" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Dép ADILETTE ESTRAP trẻ em</h3>
+                    <p class="price">480.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Dép ADILETTE ESTRAP trẻ em', 480000, 'images/dep-adidas-kids.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kids">
+                <div class="product-img">
+                    <a href="products-detail.html?id=sandal-nike-kid">
+                        <img src="images/nike-kid.png" alt="Sandal Nike trẻ em siêu nhẹ màu hồng dây chéo">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=sandal-nike-kid" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Sandal Nike trẻ em siêu nhẹ màu hồng dây chéo</h3>
+                    <p class="price">330.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Sandal Nike trẻ em siêu nhẹ màu hồng dây chéo', 330000, 'images/nike-kid.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kids">
+                <div class="product-img">
+                    <a href="products-detail.html?id=skechers-heart">
+                        <img src="images/skechers-kid.png" alt="Giày sneakers bé gái cổ thấp Heart Lights">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=skechers-heart" style="text-decoration: none; color: inherit;"></a>
+                    <h3>Giày sneakers bé gái cổ thấp Heart Lights</h3>
+                    <p class="price">790.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Giày sneakers bé gái cổ thấp Heart Lights', 790000, 'images/skechers-kid.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="kids">
+                <div class="product-img">
+                    <a href="products-detail.html?id=skechers-tracks">
+                        <img src="images/skechers-kid2.png" alt="Giày Skech Tracks Bé Nam">
+                    </a>
+                </div>
+                <div class="product-info">
+                    <a href="products-detail.html?id=skechers-tracks" style="text-decoration: none; color: inherit;">
+                        <h3>Skech Tracks Bé Nam</h3>
+                    </a>
+                    
+                    <p class="price">890.000đ</p>
+                    <button class="btn-add-cart" onclick="addToCart('Skech Tracks Bé Nam', 890000, 'images/skechers-kid2.png')">Thêm vào giỏ</button>
+                </div>
+            </div>
+            </div>
+    </section>
+    
+    <footer>
+        <div class="footer-column">
+            <h4>Customer Service</h4>
+            <a href="#">LIÊN HỆ: 0365072281</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

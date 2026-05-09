@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng - FongSport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href ="index.html"><img src="images/main-logo.png" alt="FongSport Logo" class="logo-img"></a>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <ul id="suggestionBox" class="suggestion-box hide"></ul>
+            </div>
+            <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">2</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="cart-page container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <span>Giỏ hàng của bạn</span>
+        </div>
+        
+        <h2 class="page-title">Giỏ hàng của bạn</h2>
+
+        <div class="cart-container">
+            <div class="cart-items-list">
+                
+            </div>
+
+            <div class="cart-summary">
+                <h3>Tổng đơn hàng</h3>
+                <div class="summary-line">
+                    <span>Tạm tính:</span>
+                    <span>0đ</span>
+                </div>
+                <div class="summary-line">
+                    <span>Phí giao hàng:</span>
+                    <span>0đ</span>
+                </div>
+                <hr>
+                <div class="summary-line total-line">
+                    <span>Tổng cộng:</span>
+                    <span class="total-price">0đ</span>
+                </div>
+                <a href="checkout.html" class="btn-checkout">Tiến hành thanh toán</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Customer Service</h4>
+            <a href="#">LIÊN HỆ: 0365072281</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h4>About FongSport</h4>
+            <a href="#">Our Story</a>
+            <a href="#">Careers</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

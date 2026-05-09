@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - FongSport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href ="index.html"><img src="images/main-logo.png" alt="FongSport Logo" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <ul id="suggestionBox" class="suggestion-box hide"></ul>
+            </div>
+            <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="checkout-page container" style="padding: 40px 0;">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <a href="cart.html">Giỏ hàng</a> &gt; <span>Thanh toán</span>
+        </div>
+        
+        <h2 class="page-title">Thanh toán đơn hàng</h2>
+
+        <div class="checkout-container" style="display: flex; gap: 30px; align-items: flex-start; flex-wrap: wrap;">
+            
+            <div class="billing-details" style="flex: 2; min-width: 300px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                <h3 style="margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 10px;">Thông tin giao hàng</h3>
+                
+                <form id="checkoutForm" onsubmit="placeOrder(event)">
+                    <div style="margin-bottom: 15px;">
+                        <label style="font-weight: bold; margin-bottom: 5px; display: block;">Họ và tên <span style="color:red;">*</span></label>
+                        <input type="text" required placeholder="Nhập họ và tên của bạn" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="font-weight: bold; margin-bottom: 5px; display: block;">Số điện thoại <span style="color:red;">*</span></label>
+                        <input type="tel" required placeholder="Nhập số điện thoại liên hệ" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 15px;">
+                        <label style="font-weight: bold; margin-bottom: 5px; display: block;">Địa chỉ nhận hàng <span style="color:red;">*</span></label>
+                        <textarea required placeholder="Nhập số nhà, tên đường, phường/xã, quận/huyện..." rows="3" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                    </div>
+                    
+                    <div style="margin-bottom: 25px;">
+                        <label style="font-weight: bold; margin-bottom: 5px; display: block;">Phương thức thanh toán</label>
+                        <select style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                            <option>Thanh toán khi nhận hàng (COD)</option>
+                            <option>Chuyển khoản qua Ngân hàng</option>
+                            <option>Thanh toán qua Momo</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn-shop-now" style="width: 100%; padding: 15px; font-size: 16px; border-radius: 5px; cursor: pointer; border: none; background-color: #f97316; color: white; font-weight: bold; transition: 0.3s;">XÁC NHẬN ĐẶT HÀNG</button>
+                </form>
+            </div>
+
+            <div class="order-summary" style="flex: 1; min-width: 300px; background: #f8fafc; padding: 30px; border-radius: 8px; border: 1px solid #eee;">
+                <h3 style="margin-bottom: 20px;">Đơn hàng của bạn</h3>
+                
+                <div id="checkout-items" style="margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 15px;">
+                    </div>
+                
+                <div class="summary-line" style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                    <span>Phí giao hàng:</span>
+                    <span>30.000đ</span>
+                </div>
+                <hr style="border-top: 1px dashed #ccc; margin: 15px 0;">
+                <div class="summary-line total-line" style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
+                    <span>Tổng cộng:</span>
+                    <span id="checkout-total-price" style="color: #f97316;">0đ</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Customer Service</h4>
+            <a href="#">LIÊN HỆ: 0365072281</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h4>About FongSport</h4>
+            <a href="#">Our Story</a>
+            <a href="#">Careers</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

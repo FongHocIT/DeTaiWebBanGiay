@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm - FongSport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href ="index.html"><img src="images/main-logo.png" alt="FongSport Logo" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <ul id="suggestionBox" class="suggestion-box hide"></ul>
+            </div>
+            <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">2</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="product-detail-page container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <a href="products.html">Sản phẩm</a> &gt; <span>Giày Thể Thao Adidas EQ 21 Run Shoes</span>
+        </div>
+
+        <div class="detail-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="images/adidas-aq-21.img" id="currentImage" alt="Adidas EQ 21">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="images/adidas-aq-21.img" class="thumb active" alt="Góc 1">
+                    <img src="images/adidas-aq-21-2.png" class="thumb" alt="Góc 2">
+                    <img src="images/adidas-aq-21-3.png" class="thumb" alt="Góc 3">
+                    <img src="images/adidas-aq-21-4.png" class="thumb" alt="Góc 4">
+                    <img src="images/adidas-aq-21-5.png" class="thumb" alt="Góc 5">
+                    <img src="images/adidas-aq-21-6.png" class="thumb" alt="Góc 6">
+                    <img src="images/adidas-aq-21-7.png" class="thumb" alt="Góc 7">
+                    <img src="images/adidas-aq-21-1.png" class="thumb" alt="Góc 7">
+                </div>
+            </div>
+
+            <div class="product-details-info">
+                <h1 class="product-title">Giày Thể Thao Adidas EQ 21 Run Shoes Màu Trắng</h1>
+                <div class="product-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>(4.9/5 từ 85 đánh giá)</span>
+                </div>
+                <p class="product-price">1.550.000đ <del class="old-price">1.850.000đ</del></p>
+                
+                <p class="product-desc">
+                    Adidas EQ 21 Run Shoes được thiết kế tối ưu cho người chạy bộ, với đệm Bounce linh hoạt mang lại sự thoải mái trong từng sải chân. Phom dáng ôm gọn, chất liệu thoáng khí giúp đôi chân luôn khô ráo.
+                </p>
+
+                <div class="option-group">
+                    <h3>Màu sắc: <span id="color-name">Trắng</span></h3>
+                    <div class="color-options">
+                        <button class="color-btn active" style="background-color: #f8fafc;" data-color="Trắng"></button>
+                        <button class="color-btn" style="background-color: #1a202c;" data-color="Đen"></button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <h3>Kích cỡ (Size): <span id="size-name">41</span></h3>
+                    <div class="size-options">
+                        <button class="size-btn">39</button>
+                        <button class="size-btn">40</button>
+                        <button class="size-btn active">41</button>
+                        <button class="size-btn">42</button>
+                        <button class="size-btn">43</button>
+                    </div>
+                </div>
+
+                <div class="add-to-cart-action">
+                    <div class="qty-selector">
+                        <button id="btn-minus">-</button>
+                        <input type="number" id="detail-qty" value="1" min="1">
+                        <button id="btn-plus">+</button>
+                    </div>
+                    <button class="btn-shop-now" style="flex: 1; border-radius: 5px;" onclick="addToCart('Giày Thể Thao Adidas EQ 21', 1550000, 'images/adidas-aq-21.img', document.getElementById('detail-qty').value)">THÊM VÀO GIỎ HÀNG</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Customer Service</h4>
+            <a href="#">LIÊN HỆ: 0365072281</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h4>About FongSport</h4>
+            <a href="#">Our Story</a>
+            <a href="#">Careers</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

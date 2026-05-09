@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm - FongSport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href ="index.html"><img src="images/main-logo.png" alt="FongSport Logo" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="sale.html">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <ul id="suggestionBox" class="suggestion-box hide"></ul>
+            </div>
+            <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">2</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="products-page container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt; <span>Tất cả sản phẩm</span>
+        </div>
+
+        <div class="layout-2-col">
+            <aside class="sidebar-filter">
+                <div class="filter-group">
+                    <h3>Danh mục</h3>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="cat-men"> <label for="cat-men">Giày Nam</label></li>
+                        <li><input type="checkbox" id="cat-women"> <label for="cat-women">Giày Nữ</label></li>
+                        <li><input type="checkbox" id="cat-kids"> <label for="cat-kids">Trẻ em</label></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h3>Thương hiệu</h3>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="brand-adidas"> <label for="brand-adidas">Adidas</label></li>
+                        <li><input type="checkbox" id="brand-nike"> <label for="brand-nike">Nike</label></li>
+                        <li><input type="checkbox" id="brand-bitis"> <label for="brand-bitis">Biti's</label></li>
+                    </ul>
+                </div>
+                <div class="filter-group">
+                    <h3>Mức giá</h3>
+                    <input type="range" min="0" max="5000000" value="5000000" class="price-slider">
+                    <p>Dưới: <span>5.000.000đ</span></p>
+                </div>
+            </aside>
+
+            <section class="products-grid-area">
+                <div class="grid-header">
+                    <h2>Tất cả giày (124 sản phẩm)</h2>
+                    <select class="sort-dropdown">
+                        <option value="newest">Mới nhất</option>
+                        <option value="price-asc">Giá: Thấp đến cao</option>
+                        <option value="price-desc">Giá: Cao xuống thấp</option>
+                    </select>
+                </div>
+
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <a href="products-detail.html"><img src="images/adidas-aq-21.img" alt="Giày Nam"></a>
+                        </div>
+                        <div class="product-info">
+                            <a href="products-detail.html" style="text-decoration: none; color: inherit;">
+                                <h3>Giày Thể Thao Adidas EQ 21 Run Shoes Màu Trắng</h3>
+                            </a>
+                            <p class="price">1.550.000đ</p>
+                            <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/nike-air-force.png" alt="Giày Nam">
+                        </div>
+                        <div class="product-info">
+                            <h3>Giày Nike Air Force 1 Low College Pack Midnight Navy</h3>
+                            <p class="price">3.621.000đ</p>
+                            <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/btis-hong-nu.img" alt="Giày Nữ">
+                        </div>
+                        <div class="product-info">
+                            <h3>Giày Biti's Hunter Nữ Màu Hồng</h3>
+                            <p class="price">980.000đ</p>
+                            <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="images/skechers-kid.png" alt="Giày Trẻ Em">
+                        </div>
+                        <div class="product-info">
+                            <h3>Giày sneakers bé gái cổ thấp Heart Lights</h3>
+                            <p class="price">790.000đ</p>
+                            <button class="btn-add-cart" onclick="addToCart()">Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Customer Service</h4>
+            <a href="#">LIÊN HỆ: 0365072281</a>
+            <a href="#">FAQ</a>
+        </div>
+        <div class="footer-column">
+            <h4>About FongSport</h4>
+            <a href="#">Our Story</a>
+            <a href="#">Careers</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

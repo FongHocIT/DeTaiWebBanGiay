@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khuyến mãi - FongSport</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href ="index.html"><img src="images/main-logo.png" alt="FongSport Logo" class="logo-img"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sale.html" class="active">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="header-icons">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search..." autocomplete="off">
+                <i class="fa-solid fa-magnifying-glass" id="searchBtn"></i>
+                <ul id="suggestionBox" class="suggestion-box hide"></ul>
+            </div>
+            <a href="profile.html"><i class="fa-regular fa-user"></i></a>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="sale-page container" style="padding: 40px 0;">
+        <h2 class="page-title" style="text-align: center; font-size: 32px; margin-bottom: 40px;">CHƯƠNG TRÌNH KHUYẾN MÃI</h2>
+
+        <div class="flash-sale-banner">
+            <div class="flash-sale-content">
+                <h3><i class="fa-solid fa-bolt"></i> FLASH SALE - GIỜ VÀNG GIÁ SỐC</h3>
+                <p>Giảm ngay 50% cho toàn bộ sản phẩm dòng Biti's Hunter. Nhanh tay lên, số lượng có hạn!</p>
+                <div class="countdown-timer" id="flash-sale-timer">
+                    <div class="time-box"><span id="hours">00</span><small>Giờ</small></div>
+                    <span class="colon">:</span>
+                    <div class="time-box"><span id="minutes">00</span><small>Phút</small></div>
+                    <span class="colon">:</span>
+                    <div class="time-box"><span id="seconds">00</span><small>Giây</small></div>
+                </div>
+                <a href="index.html" class="btn-shop-now">Mua ngay kẻo lỡ</a>
+            </div>
+        </div>
+
+        <h3 style="margin: 40px 0 20px 0; border-left: 4px solid var(--primary-orange); padding-left: 10px;">Sự kiện sắp diễn ra</h3>
+        <div class="promo-grid">
+            
+            <div class="promo-card">
+                <div class="promo-icon"><i class="fa-solid fa-gift"></i></div>
+                <div class="promo-info">
+                    <h4>Mừng Đại Lễ 30/4 - 1/5</h4>
+                    <p>Nhập mã <strong>ĐAILE2026</strong> giảm ngay 200K cho đơn hàng từ 1.500.000đ.</p>
+                    <span class="promo-date">Áp dụng: 28/04 - 02/05/2026</span>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-icon" style="background-color: #3b82f6;"><i class="fa-solid fa-truck-fast"></i></div>
+                <div class="promo-info">
+                    <h4>Ngày Hội Freeship Mùa Hè</h4>
+                    <p>Miễn phí giao hàng toàn quốc cho tất cả các đơn hàng có sản phẩm Giày Trẻ Em.</p>
+                    <span class="promo-date">Áp dụng: Thứ 6 hàng tuần</span>
+                </div>
+            </div>
+
+            <div class="promo-card">
+                <div class="promo-icon" style="background-color: #10b981;"><i class="fa-solid fa-user-plus"></i></div>
+                <div class="promo-info">
+                    <h4>Chào Bạn Mới</h4>
+                    <p>Tặng ngay E-Voucher 100K cho khách hàng lần đầu tạo tài khoản và mua sắm tại FongSport.</p>
+                    <span class="promo-date">Áp dụng: Không thời hạn</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-column">
+            <h4>Customer Service</h4>
+            <a href="#">LIÊN HỆ: 0365072281</a>
+        </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
