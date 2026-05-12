@@ -227,10 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.addEventListener('click', function(e) {
-            if (!searchInput.contains(e.target) && !suggestionBox.contains(e.target)) {
-                suggestionBox.classList.add('hide');
-            }
-        });
+    
+            if (e.target.classList.contains('btn-add-cart') || 
+                e.target.classList.contains('btn-add-detail') || 
+                (e.target.classList.contains('btn-shop-now') && e.target.innerText.toUpperCase().includes('GIỎ HÀNG'))) {
+                flyToCart(e.target);
+                }
+            });
 
         searchBtn.addEventListener('click', () => {
             performSearch(searchInput.value.toLowerCase().trim());
@@ -297,21 +300,28 @@ function saveCart(cart) {
     localStorage.setItem('fongSportCart', JSON.stringify(cart));
 }
 
-function addToCart(name, price, image, quantityToAdd = 1) {
+// Thêm tham số size vào hàm
+function addToCart(name, price, image, quantityToAdd = 1, size = '') {
     let cart = getCart();
-    let itemIndex = cart.findIndex(item => item.name === name);
+    
+    // ĐIỂM MẤU CHỐT: Chỉ coi là trùng khi trùng TÊN và trùng SIZE
+    let itemIndex = cart.findIndex(item => item.name === name && item.size === size);
 
     let qty = parseInt(quantityToAdd) || 1;
 
     if (itemIndex > -1) {
+        // Nếu đã có giày này VÀ đúng size này -> Tăng số lượng
         cart[itemIndex].quantity += qty;
     } else {
-        cart.push({ name, price, image, quantity: qty });
+        // Nếu là giày mới, HOẶC giày cũ nhưng khác size -> Tạo dòng mới trong giỏ
+        cart.push({ name, price, image, quantity: qty, size: size });
     }
 
     saveCart(cart);
     updateCartBadge();
-    //alert(`Đã thêm ${qty} sản phẩm ${name} vào giỏ hàng!`);
+    
+    // Bạn có thể mở comment dòng dưới để test thông báo
+    // alert(`Đã thêm giày size ${size} vào giỏ hàng!`);
 }
 
 function updateCartBadge() {
@@ -345,14 +355,15 @@ function renderCart() {
 
     cart.forEach((item, index) => {
         let safePrice = Number(item.price) || 0; 
-        
         let itemTotal = safePrice * item.quantity;
         subTotal += itemTotal;
+        
         html += `
             <div class="cart-item">
                 <img src="${item.image}" alt="${item.name}" class="cart-img">
                 <div class="cart-item-details">
                     <h4>${item.name}</h4>
+                    <p style="color: #f26522; font-weight: bold;">Size: ${item.size || 'Mặc định'}</p>
                 </div>
                 <div class="cart-item-price">${safePrice.toLocaleString('vi-VN')}đ</div>
                 <div class="cart-item-qty">
@@ -458,12 +469,19 @@ function updateSummary(subTotal) {
         });
         document.getElementById('color-name').innerText = product.colors[0];
 
-        const btnAddToCart = document.querySelector('.add-to-cart-action .btn-shop-now');
-        btnAddToCart.removeAttribute('onclick'); 
-        btnAddToCart.addEventListener('click', () => {
+        const btnAddToCart = document.querySelector('.add-to-cart-action .btn-add-detail');
+        if (btnAddToCart) {
+            btnAddToCart.removeAttribute('onclick'); 
+            btnAddToCart.addEventListener('click', () => {
             const qty = document.getElementById('detail-qty').value;
-            addToCart(product.name, product.price, product.mainImage, qty);
-        });
+        
+        // LẤY SIZE MÀ KHÁCH HÀNG ĐANG CHỌN TRÊN MÀN HÌNH
+            const selectedSize = document.getElementById('size-name').innerText;
+        
+        // Gửi tên, giá, ảnh, số lượng và SIZE vào giỏ hàng
+            addToCart(product.name, product.price, product.mainImage, qty, selectedSize);
+            });
+        }
 
         const thumbnails = document.querySelectorAll('.thumb');
         thumbnails.forEach(thumb => {
