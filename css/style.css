@@ -1,4 +1,12 @@
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+}
 
+footer {
+    margin-top: auto !important;
+}
 * {
     margin: 0;
     padding: 0;
@@ -237,11 +245,29 @@ footer a:hover {
     display: none;
 }
 
-
-.search-bar {
-    position: relative; 
+#searchInput {
+    width: 250px !important; 
+    padding: 10px 15px !important;
+    font-size: 15px !important;
+    border: 1px solid #ccc !important; 
+    border-radius: 25px !important; 
+    outline: none !important; 
 }
 
+.search-bar {
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+}
+
+#searchBtn {
+    font-size: 16px !important; 
+    cursor: pointer !important;
+    color: #555 !important;
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important; transform: translateY(-50%) !important;
+}
 
 .suggestion-box {
     position: absolute;
@@ -919,4 +945,112 @@ footer a:hover {
 
 .cart-bounce {
     animation: cartBounce 0.4s ease-in-out;
+}
+.lab-container {
+    padding: 50px 5%;
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.lab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.lab-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.lab-card:hover {
+    transform: translateY(-5px);
+}
+
+.lab-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.btn-view {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-view:hover {
+    background-color: #0056b3;
+}
+
+
+.lab-card {
+    text-align: left !important;
+    background-color: #fff !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+
+.lab-content h3 {
+    text-align: left !important;
+    font-size: 18px !important;
+    font-weight: bold !important;
+    color: #333 !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+
+.lab-list {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
+
+.lab-list li {
+    margin-bottom: 10px !important;
+}
+
+
+.lab-list a {
+    color: #333 !important;
+    text-decoration: none !important;
+    font-size: 15px !important;
+}
+
+.lab-list a:hover {
+    color: #f26522 !important; 
+}
+
+
+.btn-detail {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    background-color: #f26522 !important;
+    color: white !important;
+    padding: 10px 0 !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: bold !important;
+    margin-top: auto !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.btn-detail:hover {
+    background-color: #d9531e !important; 
+    color: white !important;
 }
